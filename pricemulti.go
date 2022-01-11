@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/lucazulian/cryptocomparego/context"
+	"context"
 )
 
 const (
@@ -113,7 +113,9 @@ func (ds *priceMultiRoot) HasError() error {
 	return priceMultiError
 }
 
-func (s *PriceMultiServiceOp) List(ctx context.Context, priceMultiRequest *PriceMultiRequest) ([]PriceMulti, *Response, error) {
+func (s *PriceMultiServiceOp) List(ctx context.Context, priceMultiRequest *PriceMultiRequest) (
+	[]PriceMulti, *Response, error,
+) {
 
 	path := pricemultiBasePath
 

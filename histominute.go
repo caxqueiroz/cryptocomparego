@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/lucazulian/cryptocomparego/context"
+	"context"
 	"github.com/pkg/errors"
 )
 
@@ -107,7 +107,9 @@ func (hr *HistominuteRequest) FormattedQueryString(baseUrl string) string {
 	return fmt.Sprintf("%s?%s", baseUrl, values.Encode())
 }
 
-func (s *HistominuteServiceOp) Get(ctx context.Context, histominuteRequest *HistominuteRequest) (*HistominuteResponse, *Response, error) {
+func (s *HistominuteServiceOp) Get(ctx context.Context, histominuteRequest *HistominuteRequest) (
+	*HistominuteResponse, *Response, error,
+) {
 
 	path := histodyBasePath
 

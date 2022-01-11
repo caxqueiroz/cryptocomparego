@@ -1,12 +1,11 @@
 package cryptocomparego
 
 import (
+	"context"
 	"fmt"
 	"net/http"
 	"net/url"
 	"strconv"
-
-	"github.com/lucazulian/cryptocomparego/context"
 )
 
 const (

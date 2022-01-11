@@ -8,8 +8,8 @@ import (
 	"strconv"
 
 	"bytes"
+	"context"
 	"encoding/json"
-	"github.com/lucazulian/cryptocomparego/context"
 	"io"
 	"io/ioutil"
 	"time"

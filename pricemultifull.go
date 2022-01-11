@@ -1,9 +1,8 @@
 package cryptocomparego
 
 import (
+	"context"
 	"net/http"
-
-	"github.com/lucazulian/cryptocomparego/context"
 )
 
 const (
@@ -44,7 +43,9 @@ func NewPriceMultiFullRequest(fsyms []string, tsyms []string) *PriceMultiRequest
 	return &pr
 }
 
-func (s *PriceMultiFullServiceOp) List(ctx context.Context, priceMultiRequest *PriceMultiRequest) ([]PriceMultiFull, *Response, error) {
+func (s *PriceMultiFullServiceOp) List(ctx context.Context, priceMultiRequest *PriceMultiRequest) (
+	[]PriceMultiFull, *Response, error,
+) {
 
 	path := pricemultifullBasePath
 

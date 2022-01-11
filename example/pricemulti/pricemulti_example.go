@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/lucazulian/cryptocomparego"
-	"github.com/lucazulian/cryptocomparego/context"
+	"context"
+	"github.com/caxqueiroz/cryptocomparego"
 )
 
 func main() {
@@ -12,7 +12,7 @@ func main() {
 	client := cryptocomparego.NewClient(nil)
 	ctx := context.TODO()
 
-	priceMultiRequest := cryptocomparego.NewPriceMultiRequest([]string{"BTC", "ETH"}, []string{"BTC", "USD", "EUR"})
+	priceMultiRequest := cryptocomparego.NewPriceMultiRequest([]string{"BTC", "ETH"}, []string{"BRL", "USD", "EUR"})
 	priceMultiList, _, err := client.PriceMulti.List(ctx, priceMultiRequest)
 
 	if err != nil {

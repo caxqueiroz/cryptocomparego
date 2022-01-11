@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/lucazulian/cryptocomparego"
-	"github.com/lucazulian/cryptocomparego/context"
+	"context"
+	"github.com/caxqueiroz/cryptocomparego"
 )
 
 func main() {

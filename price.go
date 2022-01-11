@@ -1,6 +1,7 @@
 package cryptocomparego
 
 import (
+	"context"
 	"errors"
 	"fmt"
 	"net/http"
@@ -8,8 +9,6 @@ import (
 	"sort"
 	"strconv"
 	"strings"
-
-	"github.com/lucazulian/cryptocomparego/context"
 )
 
 const (
